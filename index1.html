@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=ai-legible&utm_source=comment&utm_medium=referral&utm_id=36f444ba-5fae-4026-abe1-f9029cd98066
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="hosting-provider" content="Netlify">
+<meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=36f444ba-5fae-4026-abe1-f9029cd98066">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Da Memoria</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="moti.css"> <!-- Adicionando o CSS do texto motivacional -->
+</head>
+<body>
+    <main>
+        <section class="section1">
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <table>
+                <tr>
+                    <td><button id="1" onclick="tirar(1)"></button></td>
+                    <td><button id="0" onclick="tirar(0)"></button></td>
+                    <td><button id="2" onclick="tirar(2)"></button></td>
+                    <td><button id="3" onclick="tirar(3)"></button></td>
+                </tr>
+                <tr>
+                    <td><button id="4" onclick="tirar(4)"></button></td>
+                    <td><button id="5" onclick="tirar(5)"></button></td>
+                    <td><button id="6" onclick="tirar(6)"></button></td>
+                    <td><button id="7" onclick="tirar(7)"></button></td>
+                </tr>
+                <tr>
+                    <td><button id="8" onclick="tirar(8)"></button></td>
+                    <td><button id="9" onclick="tirar(9)"></button></td>
+                    <td><button id="10" onclick="tirar(10)"></button></td>
+                    <td><button id="11" onclick="tirar(11)"></button></td>
+                </tr>
+                <tr>
+                    <td><button id="12" onclick="tirar(12)"></button></td>
+                    <td><button id="13" onclick="tirar(13)"></button></td>
+                    <td><button id="14" onclick="tirar(14)"></button></td>
+                    <td><button id="15" onclick="tirar(15)"></button></td>
+                </tr>
+            </table>
+        </section>
+        <section class="section2">
+            <h2 id="Acertos" class="Estatísticas">Certos : 0</h2>
+            <h2 id="t-restante" class="Estatísticas">Tempo : 0 Segundos</h2>
+            <h2 id="Move" class="Estatísticas">Movimento : 0</h2>
+        </section>
+    </main>
+    <div id="final-layout" class="section2" style="display: none; flex-direction: row; justify-content: space-around;">
+        <h2>Resultados Finais</h2>
+        <div class="Estatísticas">
+            <p>Tempo total: <span id="final-time"></span> segundos</p>
+        </div>
+        <div class="Estatísticas">
+            <p>Movimentos totais: <span id="final-movements"></span></p>
+        </div>
+    </div>
+    
+    <div id="motivational-text" class="motivational-text">Você é forte! Não desista!</div> <!-- Texto motivacional -->
+    <footer>
+        <p>Você não está só. 👉 <a href="https://cvv.org.br">188</a> </p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

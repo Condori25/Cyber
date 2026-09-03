@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+}
+body {
+    background: rgb(74,0,255);
+background: radial-gradient(circle, rgba(74,0,255,1) 2%, rgba(14,147,193,1) 100%);
+font-family: sans-serif;
+color: rgb(0, 0, 0);
+}

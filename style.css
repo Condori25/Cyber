@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  background: linear-gradient(-45deg, rgba(74,0,255,1), rgba(14,147,193,1), #1a1a2e, #0f3460);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: 1000px; /* Aumentando a largura máxima */
+  margin: 20px auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 15px;
+}
+
+.section1, .section2 {
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease;
+}
+
+.section1 {
+  flex: 3; /* Aumentando a flexibilidade da seção */
+  min-width: 400px; /* Largura mínima aumentada */
+}
+
+.section2 {
+  flex: 1; /* Flexibilidade ajustada para ocupar menos espaço */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #e94560;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+table {
+  width: 100%; /* Ajustando para ocupar toda a largura disponível */
+}
+
+button {
+  height: 100px; /* Aumentando a altura do botão */
+  width: 100px; /* Aumentando a largura do botão */
+  font-size: 40px; /* Aumentando o tamanho da fonte */
+  color: #fff;
+  font-weight: bold;
+  background: linear-gradient(45deg, #e94560, #0f3460);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden; /* Adicionado para conter a imagem */
+  padding: 0; /* Removido o padding para a imagem preencher todo o espaço */
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(233, 69, 96, 0.3);
+}
+
+.Estatísticas {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 12px;
+  box-sizing: border-box;
+  background-color: rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #e94560;
+  transition: color 0.3s ease;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes desvirar {
+  0% {
+      transform: rotateY(0deg);
+  }
+  50% {
+      transform: rotateY(90deg);
+  }
+  100% {
+      transform: rotateY(0deg);
+  }
+}
+
+button.flip {
+  animation: desvirar 0.5s forwards;
+}
+
+.reveal {
+  opacity: 0; /* Começa invisível */
+  transition: opacity 0.5s ease; /* Transição suave para opacidade */
+}
+
+.reveal.visible {
+  opacity: 1; /* Torna o elemento visível */
+}
+
+/* Progress Bar CSS */
+.progress-container {
+  width: 100%; /* Largura total da barra */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 25px; /* Bordas arredondadas */
+  overflow: hidden; /* Para esconder o excesso */
+  margin-bottom: 15px; /* Espaço abaixo da barra */
+}
+
+.progress-bar {
+  height: 20px; /* Altura da barra */
+  width: 0%; /* Começa vazia */
+  background-color: #e94560; /* Cor da barra */
+  border-radius: 25px; /* Bordas arredondadas */
+  transition: width 0.3s ease; /* Transição suave para o preenchimento */
+}
+button {
+  height: 100px; /* Aumentando a altura do botão */
+  width: 100px; /* Aumentando a largura do botão */
+  font-size: 40px; /* Aumentando o tamanho da fonte */
+  color: #fff;
+  font-weight: bold;
+  background: linear-gradient(45deg, #e94560, #0f3460);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden; /* Adicionado para conter a imagem */
+  padding: 0; /* Removido o padding para a imagem preencher todo o espaço */
+}
+
+button img {
+  width: 100%; /* Ajusta a largura da imagem para preencher o botão */
+  height: 100%; /* Ajusta a altura da imagem para preencher o botão */
+  object-fit: cover; /* Faz a imagem cobrir todo o espaço do botão */
+  object-position: center; /* Centraliza a imagem */
+}
+/* Animação de fade-out */
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+#final-layout {
+  display: flex; /* Usa flexbox para alinhar os itens */
+  flex-direction: row; /* Alinha os itens na horizontal */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  padding: 20px; /* Espaço interno */
+  background-color: rgba(0, 0, 0, 0.9); /* Fundo escuro com transparência */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+
+  /* Propriedades de tamanho */
+  width: 80%; /* Ajusta a largura para 80% da largura da tela */
+  max-width: 900px; /* Limita a largura máxima a 900px */
+  height: 200px; /* Define uma altura adequada para um layout horizontal */
+  position: fixed; /* Define a posição como fixa */
+  top: 50%; /* Posiciona no meio da tela verticalmente */
+  left: 50%; /* Posiciona no meio da tela horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta para centralizar corretamente */
+  display: none; /* Oculta o layout inicialmente */
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.fade-out.hide {
+  opacity: 0;
+}
+
