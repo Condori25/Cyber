@@ -30,7 +30,7 @@ const handleSubmit = (event) => {
             localStorage.setItem('players', JSON.stringify(playersData));
 
             // Redireciona para a página do jogo
-            window.location.href =  '/index1.html';
+            window.location.href =  '/jogo.html';
         } else {
             alert('Este nome de jogador já está em uso. Por favor, escolha outro nome.');
         }
